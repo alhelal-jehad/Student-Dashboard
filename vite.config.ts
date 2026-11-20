@@ -17,7 +17,17 @@ export default defineConfig({
   build: { target: 'es2022', sourcemap: true },
   server: {
     // Same-site API in dev: no CORS, cookies stay first-party.
-    proxy: { '/api': { target: 'http://localhost:8080', changeOrigin: false } },
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080',
+        changeOrigin: false,
+        configure: (proxy) =>
+          // No backend running: answer 503 quietly instead of logging ECONNREFUSED per request.
+          proxy.on('error', (_err, _req, res) => {
+            if ('writeHead' in res && !res.headersSent) res.writeHead(503).end();
+          }),
+      },
+    },
   },
   test: { environment: 'jsdom', include: ['src/**/*.test.ts'] },
 });

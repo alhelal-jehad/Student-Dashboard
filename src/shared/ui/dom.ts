@@ -1,5 +1,5 @@
 type AttrValue = string | number | boolean | undefined;
-type Child = Node | string | null | false;
+type Child = Node | string | null | false | undefined;
 
 /**
  * Safe element builder. String children become text nodes (never parsed as HTML), and

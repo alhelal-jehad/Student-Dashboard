@@ -8,7 +8,7 @@ export const EASE = { enter: 'easeOut', leave: 'easeIn' } as const;
 export type MotionKind = keyof typeof DURATION;
 
 /** The single place prefers-reduced-motion is checked. */
-function reduced(): boolean {
+export function reduced(): boolean {
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 

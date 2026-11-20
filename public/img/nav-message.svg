@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Search Bar" clip-path="url(#clip0_0_624)">
+<path id="Vector" d="M14.6667 8C14.6667 11.6819 11.6819 14.6667 8 14.6667C6.93355 14.6667 5.92558 14.4163 5.03169 13.971C4.79414 13.8527 4.52262 13.8133 4.26626 13.8819L2.78223 14.279C2.13801 14.4514 1.54864 13.862 1.72101 13.2178L2.11808 11.7337C2.18667 11.4774 2.14729 11.2059 2.02897 10.9683C1.58374 10.0744 1.33333 9.06645 1.33333 8C1.33333 4.3181 4.3181 1.33333 8 1.33333C11.6819 1.33333 14.6667 4.3181 14.6667 8Z" stroke="#8789A1"/>
+<path id="Vector_2" d="M5.33333 7H10.6667" stroke-linecap="round" stroke="#8789A1"/>
+<path id="Vector_3" d="M5.33333 9.33333H9" stroke-linecap="round" stroke="#8789A1"/>
+</g>
+<defs>
+<clipPath id="clip0_0_624">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

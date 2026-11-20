@@ -23,6 +23,29 @@
   --color-success-soft: var(--c-success-soft);
   --color-warning: var(--c-warning);
   --color-warning-soft: var(--c-warning-soft);
+  --color-canvas: var(--c-canvas);
+
+  /* Figma palette (Student Page). Fixed values: the dashboard design is light-only. */
+  --color-brand: #9d2266;
+  --color-brand-deep: #7e1b51;
+  --color-brand-mid: #c73f80;
+  --color-brand-100: #f7ccdf;
+  --color-brand-50: #fceef5;
+  --color-ink: #23263b;
+  --color-ink-2: #4a4d67;
+  --color-ink-3: #8789a1;
+  --color-nav: #2c2f4a;
+  --color-nav-deep: #23263b;
+  --color-nav-muted: #8789a1;
+  --color-nav-text: #cad5e2;
+  --color-gray-50: #f9fafb;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-600: #4b5563;
+  --color-rose: #e11d48;
+  --color-green: #15803d;
+  --color-pill: #f5f7fc;
+  --color-white: #ffffff;
 }
 
 @theme {
@@ -38,7 +61,7 @@
   --shadow-overlay: 0 10px 24px -4px rgb(0 0 0 / 0.18);
 
   --font-sans:
-    system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Noto Sans Arabic', sans-serif;
+    Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Noto Sans Arabic', sans-serif;
 
   --text-sm: 0.875rem;
   --text-base: 1rem;
@@ -58,6 +81,7 @@
 
 /* Runtime values. Dark mode swaps these and nothing else. Body text contrast >= 4.5:1 in both. */
 :root {
+  --c-canvas: #f3f4f8;
   --c-surface: #ffffff;
   --c-raised: #f6f7f9;
   --c-sunken: #eceef2;
@@ -78,16 +102,17 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --c-canvas: #0b1120;
     --c-surface: #0f172a;
     --c-raised: #1e293b;
     --c-sunken: #334155;
     --c-fg: #f1f5f9;
     --c-muted: #cbd5e1;
     --c-line: #475569;
-    --c-primary: #7aa7ff;
-    --c-primary-hover: #a3c1ff;
-    --c-on-primary: #0b1220;
-    --c-primary-soft: #1e3a8a;
+    --c-primary: #f08fbd;
+    --c-primary-hover: #f7ccdf;
+    --c-on-primary: #14040d;
+    --c-primary-soft: #5c1a3d;
     --c-danger: #fca5a5;
     --c-danger-soft: #5b1a1a;
     --c-success: #86efac;
@@ -98,6 +123,20 @@
 }
 
 body {
+  background: var(--c-canvas);
   font-family: var(--font-sans);
   font-size: var(--text-base);
+}
+
+/* Micro-animations: breathing count badge, blinking live dot */
+@keyframes breathe { 50% { transform: scale(1.12); } }
+@keyframes blink { 50% { opacity: 0.25; } }
+.anim-breathe { animation: breathe 2.4s ease-in-out infinite; }
+.anim-blink { animation: blink 1.4s ease-in-out infinite; }
+@keyframes ripple { from { transform: scale(1); opacity: 0.3; } to { transform: scale(1.35); opacity: 0; } }
+.anim-ripple { isolation: isolate; }
+.anim-ripple::after { content: ''; position: absolute; inset: -4px; border-radius: 9999px; background: var(--color-brand); pointer-events: none; z-index: -1; animation: ripple 2s ease-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .anim-breathe, .anim-blink { animation: none; }
+  .anim-ripple::after { display: none; }
 }

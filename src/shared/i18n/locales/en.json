@@ -3,7 +3,8 @@
     "name": "Studynet",
     "skip": "Skip to main content",
     "language": "Language",
-    "notFoundTitle": "Page not found"
+    "notFoundTitle": "Page not found",
+    "profileRole": "Student"
   },
   "nav": {
     "label": "Main",
@@ -12,7 +13,20 @@
     "messages": "Messages",
     "deadlines": "Deadlines",
     "profile": "Profile",
-    "home": "Home"
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "overview": "Overview",
+    "myStudy": "My study",
+    "connect": "Connect",
+    "studynetAi": "Studynet AI",
+    "studyPlan": "Study Plan",
+    "appointment": "Appointment",
+    "events": "Events",
+    "search": "Search..",
+    "collapse": "Toggle sidebar",
+    "chat": "Chat",
+    "notifications": "Notifications",
+    "announcements": "Announcements"
   },
   "actions": {
     "retry": "Try again",
@@ -48,32 +62,45 @@
     }
   },
   "home": {
-    "greeting": "Good morning, {{name}}!",
-    "actionsDue_one": "You have {{count}} Required Action due today.",
-    "actionsDue_other": "You have {{count}} Required Actions due today.",
+    "greeting": "Good morning, {{name}} !",
     "askAi": "Ask AI",
     "createPlan": "Create Study Plan",
     "viewAll": "View All",
-    "badgeCount": "{{count}} new",
+    "prev": "Previous",
+    "next": "Next",
     "offers": {
       "title": "Offers and Promotions",
-      "headline": "Exclusive Offers for Your Study Journey in Australia",
-      "cta": "Explore Offers"
+      "cta": "Explore Offers",
+      "alt": "Exclusive Offers for your study journey in Australia"
     },
     "events": {
       "title": "Events and Expos",
-      "headline": "Study in Sydney",
-      "cta": "Register Now"
+      "cta": "Register Now",
+      "alt": "Study in Sydney"
     },
     "todo": {
       "title": "Your To-do’s",
       "sub": "Everything for your study journey",
       "required": "Required Action",
-      "item": "Upload your passport",
-      "itemBody": "Your counsellor needs it to check your visa options. Due today, takes about 2 minutes.",
-      "upload": "Upload",
-      "showAll": "Show All"
+      "showAll": "Show All",
+      "showLess": "Show Less",
+      "passport": {
+        "title": "Upload your passport",
+        "body": "Your counsellor needs it to check your visa options. Due today, takes about 2 minutes.",
+        "cta": "Upload"
+      },
+      "declaration": {
+        "title": "Submit Declaration Form",
+        "body": "Confirm your details so your application can move forward. Due this week, takes about 5 minutes.",
+        "cta": "Submit"
+      },
+      "profile": {
+        "title": "Finish your profile",
+        "body": "Add your study goals and budget so we can match you with the right courses. 60% complete.",
+        "cta": "Update"
+      }
     },
+    "badge": "{{count}} pending",
     "services": {
       "title": "Services",
       "sub": "Everything for your study journey",
@@ -101,8 +128,11 @@
     },
     "progress": {
       "title": "Progress Tracker",
-      "meta": "6 steps · 2 done",
-      "due": "Step 3 of 6 · Due 22 Nov · 5 days left",
+      "meta": "{{total}} steps · {{done}} done",
+      "show": "Show Steps",
+      "hide": "Hide Steps",
+      "chip": "Step {{n}} of {{total}}",
+      "due": "Due 22 Nov · 5 days left",
       "task": "Accept your offer",
       "detail": "Master of Data Science · University of Sydney · Starts Jul 2027, Sydney",
       "view": "View Offer Letter",
@@ -130,7 +160,7 @@
         }
       },
       "coe": {
-        "title": "CoE",
+        "title": "COE",
         "note": "Next: deposit and health cover"
       },
       "visa": {
@@ -148,6 +178,67 @@
       "title": "Find the right counsellor for your study plan",
       "body": "Match by study area, language and time. Meet online or in office.",
       "cta": "Find a counsellor"
+    },
+    "due": {
+      "pre": "You have {{count}} ",
+      "action_one": "Required Action",
+      "action_other": "Required Actions",
+      "post": " due today."
+    }
+  },
+  "chat": {
+    "title": "StudyNet AI",
+    "status": "Online · replies in seconds",
+    "newChat": "New chat",
+    "minimize": "Minimize chat",
+    "close": "Close chat",
+    "placeholder": "Ask me anything",
+    "placeholderWelcome": "Ask anything about your study journey",
+    "send": "Send message",
+    "attach": "Attach file",
+    "mic": "Voice input (coming soon)",
+    "typing": "StudyNet AI is typing",
+    "suggest": {
+      "journey": "Start Your Journey",
+      "scholarship": "Scholarship and Funding Options",
+      "courses": "Popular Courses and Future Career"
+    },
+    "intent": {
+      "passport": "Upload your passport",
+      "counsellor": "Talk to a counsellor",
+      "offer": "Accept your offer",
+      "visa": "Check my visa options"
+    },
+    "welcome": {
+      "title": "Hi {{name}}, how can I help?",
+      "sub": "Pick a quick action, or ask me anything about your study journey.",
+      "quick": "QUICK ACTIONS",
+      "offer": "University of Sydney · 5 days left",
+      "visa": "Student visa (subclass 500)",
+      "counsellor": "22 counsellors online now",
+      "disclaimer": "AI can make mistakes. Confirm important details with your counsellor."
+    },
+    "drop": {
+      "title": "Drop your passport here",
+      "upload": "Upload",
+      "hint": "JPG, PNG or PDF · up to 10 MB",
+      "tip": "Show the photo page with all four corners visible and no glare.",
+      "badType": "Only JPG, PNG or PDF files can be uploaded.",
+      "tooBig": "That file is over 10 MB. Please choose a smaller one."
+    },
+    "file": {
+      "uploading": "Uploading… {{pct}}%",
+      "completed": "Completed",
+      "cancel": "Cancel upload",
+      "view": "View"
+    },
+    "reply": {
+      "passport": "Sure, {{name}}. Your counsellor needs your passport to check your visa options. Upload the photo page and I’ll save it to your profile.",
+      "saved": "Your passport is saved and your counsellor can now check your visa options. What would you like to do next?",
+      "counsellor": "Of course. 22 counsellors are online now. I’ll pass your details to the next available one.",
+      "offer": "Your offer from the University of Sydney needs a reply within 5 days. Open the Accept your offer task on your dashboard to continue.",
+      "visa": "You’re on the Student visa (subclass 500) path. Upload your passport and I can check your options.",
+      "other": "I can help with your offer, visa, documents and counsellors. Pick one to get started."
     }
   }
 }
