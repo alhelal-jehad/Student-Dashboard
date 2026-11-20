@@ -1,0 +1,153 @@
+{
+  "app": {
+    "name": "Studynet",
+    "skip": "Skip to main content",
+    "language": "Language",
+    "notFoundTitle": "Page not found"
+  },
+  "nav": {
+    "label": "Main",
+    "applications": "Applications",
+    "documents": "Documents",
+    "messages": "Messages",
+    "deadlines": "Deadlines",
+    "profile": "Profile",
+    "home": "Home"
+  },
+  "actions": {
+    "retry": "Try again",
+    "reload": "Reload page",
+    "goHome": "Go to Applications"
+  },
+  "errors": {
+    "network": "We couldn't reach Studynet. Check your internet connection, then try again.",
+    "unauthorized": "Your session has ended. Sign in again to continue.",
+    "forbidden": "Your account doesn't have access to this page. If you think this is a mistake, contact your adviser.",
+    "not_found": "We couldn't find that page. Go back to Applications and try again.",
+    "rate_limited": "You've made too many requests. Wait a minute, then try again.",
+    "server": "Something went wrong on our side. Try again in a few minutes.",
+    "invalid_response": "We received data we couldn't read. Try again, and contact support if it keeps happening.",
+    "chunk": "This page didn't load, probably because of a weak connection. Reload to try again.",
+    "unknown": "Something unexpected happened. Try again."
+  },
+  "applications": {
+    "title": "Applications",
+    "loading": "Loading your applications",
+    "count_one": "{{count}} application",
+    "count_other": "{{count}} applications",
+    "updated": "Updated {{date}}",
+    "emptyTitle": "No applications yet",
+    "emptyBody": "Once you start an application, its progress will appear here.",
+    "errorTitle": "We couldn't load your applications",
+    "status": {
+      "draft": "Draft",
+      "submitted": "Submitted",
+      "under_review": "Under review",
+      "offer": "Offer received",
+      "rejected": "Not successful"
+    }
+  },
+  "home": {
+    "greeting": "Good morning, {{name}}!",
+    "actionsDue_one": "You have {{count}} Required Action due today.",
+    "actionsDue_other": "You have {{count}} Required Actions due today.",
+    "askAi": "Ask AI",
+    "createPlan": "Create Study Plan",
+    "viewAll": "View All",
+    "badgeCount": "{{count}} new",
+    "offers": {
+      "title": "Offers and Promotions",
+      "headline": "Exclusive Offers for Your Study Journey in Australia",
+      "cta": "Explore Offers"
+    },
+    "events": {
+      "title": "Events and Expos",
+      "headline": "Study in Sydney",
+      "cta": "Register Now"
+    },
+    "todo": {
+      "title": "Your To-do’s",
+      "sub": "Everything for your study journey",
+      "required": "Required Action",
+      "item": "Upload your passport",
+      "itemBody": "Your counsellor needs it to check your visa options. Due today, takes about 2 minutes.",
+      "upload": "Upload",
+      "showAll": "Show All"
+    },
+    "services": {
+      "title": "Services",
+      "sub": "Everything for your study journey",
+      "courses": "Find Courses",
+      "visa": "Visa",
+      "health": "Health cover",
+      "housing": "Housing",
+      "payments": "Payments",
+      "english": "English",
+      "tests": "Test booking",
+      "pys": "Prof. Year",
+      "careers": "Careers",
+      "documents": "Documents"
+    },
+    "ai": {
+      "title": "AI Tools",
+      "sub": "Instant answers, day or night",
+      "askAi": "Ask AI",
+      "scholarships": "Scholarships",
+      "canApply": "Can I apply?",
+      "sop": "Write my SOP",
+      "budget": "My budget",
+      "visaCheck": "Visa check",
+      "whatsapp": "WhatsApp"
+    },
+    "progress": {
+      "title": "Progress Tracker",
+      "meta": "6 steps · 2 done",
+      "due": "Step 3 of 6 · Due 22 Nov · 5 days left",
+      "task": "Accept your offer",
+      "detail": "Master of Data Science · University of Sydney · Starts Jul 2027, Sydney",
+      "view": "View Offer Letter",
+      "accept": "Accept offer"
+    },
+    "steps": {
+      "title": "Your Steps to Australia",
+      "progress": "{{done}} of {{total}} steps done",
+      "view": "View Journey",
+      "enquiry": {
+        "title": "Enquiry",
+        "note": "Done · 15 Oct"
+      },
+      "apply": {
+        "title": "Apply",
+        "note": "Done · Application sent"
+      },
+      "offer": {
+        "title": "Offer",
+        "note": "Now: accept your offer",
+        "sub": {
+          "received": "Offer received",
+          "accept": "Accept your offer",
+          "sign": "Sign and return"
+        }
+      },
+      "coe": {
+        "title": "CoE",
+        "note": "Next: deposit and health cover"
+      },
+      "visa": {
+        "title": "Visa",
+        "note": "Student visa (subclass 500)"
+      },
+      "arrive": {
+        "title": "Arrive",
+        "note": "Housing and airport pickup"
+      }
+    },
+    "counsellor": {
+      "live": "Live now",
+      "online": "Counsellors Online",
+      "title": "Find the right counsellor for your study plan",
+      "body": "Match by study area, language and time. Meet online or in office.",
+      "cta": "Find a counsellor"
+    }
+  }
+}

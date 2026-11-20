@@ -1,0 +1,103 @@
+@import 'tailwindcss';
+
+/*
+ * Design tokens, defined once. Markup uses semantic names only (bg-primary, text-muted),
+ * never raw palette names. `--color-*: initial` removes Tailwind's default palette so a
+ * raw `bg-blue-500` fails to compile into anything.
+ */
+@theme inline {
+  --color-*: initial;
+  --color-surface: var(--c-surface);
+  --color-raised: var(--c-raised);
+  --color-sunken: var(--c-sunken);
+  --color-fg: var(--c-fg);
+  --color-muted: var(--c-muted);
+  --color-line: var(--c-line);
+  --color-primary: var(--c-primary);
+  --color-primary-hover: var(--c-primary-hover);
+  --color-on-primary: var(--c-on-primary);
+  --color-primary-soft: var(--c-primary-soft);
+  --color-danger: var(--c-danger);
+  --color-danger-soft: var(--c-danger-soft);
+  --color-success: var(--c-success);
+  --color-success-soft: var(--c-success-soft);
+  --color-warning: var(--c-warning);
+  --color-warning-soft: var(--c-warning-soft);
+}
+
+@theme {
+  /* Spacing: Tailwind v4 derives every spacing utility from this 4px base (4/8pt grid). */
+  --spacing: 0.25rem;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-full: 9999px;
+
+  --shadow-card: 0 1px 2px 0 rgb(0 0 0 / 0.06), 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  --shadow-overlay: 0 10px 24px -4px rgb(0 0 0 / 0.18);
+
+  --font-sans:
+    system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Noto Sans Arabic', sans-serif;
+
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+
+  --z-nav: 20;
+  --z-overlay: 40;
+  --z-toast: 60;
+
+  /* Motion durations (also mirrored in shared/ui/motion.ts for the animate() calls). */
+  --duration-micro: 120ms;
+  --duration-menu: 180ms;
+  --duration-modal: 250ms;
+}
+
+/* Runtime values. Dark mode swaps these and nothing else. Body text contrast >= 4.5:1 in both. */
+:root {
+  --c-surface: #ffffff;
+  --c-raised: #f6f7f9;
+  --c-sunken: #eceef2;
+  --c-fg: #111827;
+  --c-muted: #4b5563;
+  --c-line: #c9ced6;
+  --c-primary: #7e1b51;
+  --c-primary-hover: #9d2266;
+  --c-on-primary: #ffffff;
+  --c-primary-soft: #fceef5;
+  --c-danger: #b91c1c;
+  --c-danger-soft: #fde4e4;
+  --c-success: #15803d;
+  --c-success-soft: #dcf5e4;
+  --c-warning: #92400e;
+  --c-warning-soft: #fdecc8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-surface: #0f172a;
+    --c-raised: #1e293b;
+    --c-sunken: #334155;
+    --c-fg: #f1f5f9;
+    --c-muted: #cbd5e1;
+    --c-line: #475569;
+    --c-primary: #7aa7ff;
+    --c-primary-hover: #a3c1ff;
+    --c-on-primary: #0b1220;
+    --c-primary-soft: #1e3a8a;
+    --c-danger: #fca5a5;
+    --c-danger-soft: #5b1a1a;
+    --c-success: #86efac;
+    --c-success-soft: #14532d;
+    --c-warning: #fcd34d;
+    --c-warning-soft: #5c3b0a;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+}
