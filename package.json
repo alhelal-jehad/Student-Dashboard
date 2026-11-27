@@ -14,7 +14,7 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "i18next": "^27.2.2",
+    "i18next": "^27.2.6",
     "motion": "^14.14.0",
     "zod": "^4.6.7"
   },
